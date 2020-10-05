@@ -1,0 +1,70 @@
+{include="../header"}
+
+<link href="{$TEMPLATE_BASE_DIR}css/plugins/footable.css" rel="stylesheet">
+<script src="{$TEMPLATE_BASE_DIR}js/plugins/footable.min.js"></script>
+
+<script>
+    $(document).ready(function() {  $('.footable').footable(); });
+</script>
+
+<div class="container">
+
+	<h1 class="h1-title">{$NAME} | Liste des membres</h1>
+
+	<div class="dashboard">
+
+		{include="../dashboard_menu"}
+
+		<div class="content-right">
+			
+			{if="$ERROR_MEMBRE!=null"}
+			<h3 class="display-errors">{$ERROR_MEMBRE}</h3>
+			{/if}
+
+			<div class="membres-all_list">
+                <input type="text" class="search-content" id="filter" placeholder="Rechercher un article dans le tableau...">
+                <hr />
+                <table class="footable" data-page-size="15" data-filter="#filter">
+                    <thead>
+                        <tr class="table-titles">
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Date d'inscription</th>
+                            <th data-hide="phone,tablet">Pays</th>
+                            <th data-hide="phone,tablet">Age</th>
+                            <th data-hide="phone,tablet">Sexe</th>
+                            <th data-hide="phone,tablet">Modifications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{loop="$MEMBRES"}
+                        <tr>
+                            <td>{$value.nom}</td>
+                            <td>{$value.prenom}</td>
+                            <td>{$value.email}</td>
+                            <td>{$value.date_inscription}</td>
+                            <td>{$value.pays}</td>
+                            <td>{$value.age}</td>
+                            <td>{$value.sexe}</td>
+                            <td><a href="{$BASE_DIR}membres-delete/{$value.id}" class="btn-delete">Supprimer</a> / <a href="{$BASE_DIR}membres-ban/{$value.id}" class="btn-delete">Bannir</a> / <a href="{$BASE_DIR}membres-allow/{$value.id}" class="btn-edit">Autoriser</a></td>
+                        </tr>
+                        {/loop}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <ul class="pagination"></ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{include="../footer"}

@@ -1,0 +1,14 @@
+User-Agent: *
+
+Disallow: /Cache
+Disallow: /Controllers
+Disallow: /Config
+Disallow: /Libs
+Disallow: /Models
+Disallow: /Sauvegardes
+Disallow: /Files
+Disallow: /Data
+Disallow: /Images
+Disallow: /Données
+Disallow: /Debug
+Disallow: .htacess

@@ -1,0 +1,67 @@
+{include="../header"}
+
+<link href="{$TEMPLATE_BASE_DIR}css/plugins/footable.css" rel="stylesheet">
+<script src="{$TEMPLATE_BASE_DIR}js/plugins/footable.min.js"></script>
+
+<script>
+    $(document).ready(function() {  $('.footable').footable(); });
+</script>
+
+<div class="container">
+
+	<h1 class="h1-title">{$NAME} | Liste des articles</h1>
+
+	<div class="dashboard">
+
+		{include="../dashboard_menu"}
+
+		<div class="content-right">
+			
+			{if="$ERROR_ARTICLE!=null"}
+			<h3 class="display-errors">{$ERROR_ARTICLE}</h3>
+			{/if}
+
+			<div class="articles-all_list">
+				<label for="filter" style="display: none;">Rechercher un article dans le tableau...</label>
+                <input type="text" class="search-content" id="filter" placeholder="Rechercher un article dans le tableau...">
+                <hr />
+                <table class="footable" data-page-size="7" data-filter="#filter">
+                    <thead>
+                        <tr class="table-titles">
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Aperçu</th>
+                            <th>Date</th>
+                            <th data-hide="phone,tablet">Lien image</th>
+                            <th data-hide="phone,tablet">Modifications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{loop="$ARTICLES"}
+                        <tr>
+                            <td>{$value.titre}</td>
+                            <td>{$value.auteur}</td>
+                            <td>{$value.contenu}</td>
+                            <td>{$value.date}</td>
+                            <td>{$value.lien_image}</td>
+                            <td><a href="{$BASE_DIR}articles-edit/{$value.id}" class="btn-edit">Editer</a> / <a href="{$BASE_DIR}articles-delete/{$value.id}" class="btn-delete">Supprimer</a></td>
+                        </tr>
+                        {/loop}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <ul class="pagination"></ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{include="../footer"}

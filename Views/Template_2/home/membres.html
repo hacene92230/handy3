@@ -1,0 +1,24 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title">Profils des membres</h1>
+
+	{if="$ERROR_MEMBRE!=null"}
+	<h3 class="display-errors">{$ERROR_MEMBRE}</h3>
+	{else}
+
+	<h3><i class="fa fa-user"></i> Membre : {$MEMBRE}</h3>
+
+	<ul class="display-informations_membre">
+	{loop="$INFORMATIONS"}
+        <li>{$key} : {$value}</li>
+    {/loop}
+    </ul>
+
+	{/if}
+
+
+</div>
+
+{include="../footer"}

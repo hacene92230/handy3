@@ -1,0 +1,60 @@
+[17-May-2017 09:20:35 Europe/Paris] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI)' in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php:30
+Stack trace:
+#0 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(30): PDO->__construct('mysql:dbname=ha...', 'root', 'root', Array)
+#1 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(44): home\home->ConnectToDb()
+#2 D:\Programmes\wamp64\www\Projets\handi3\Controllers\home\home.php(8): home\home->SearchArticles()
+#3 D:\Programmes\wamp64\www\Projets\handi3\index.php(18): require('D:\\Programmes\\w...')
+#4 [internal function]: {closure}()
+#5 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(329): call_user_func_array(Object(Closure), Array)
+#6 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(253): Bramus\Router\Router->handle(Array, true)
+#7 D:\Programmes\wamp64\www\Projets\handi3\index.php(44): Bramus\Router\Router->run()
+#8 {main}
+  thrown in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php on line 30
+[19-Jan-2018 21:25:41 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php:30
+Stack trace:
+#0 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(30): PDO->__construct('mysql:dbname=ha...', 'root', 'root', Array)
+#1 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(44): home\home->ConnectToDb()
+#2 D:\Programmes\wamp64\www\Projets\handi3\Controllers\home\home.php(8): home\home->SearchArticles()
+#3 D:\Programmes\wamp64\www\Projets\handi3\index.php(18): require('D:\\Programmes\\w...')
+#4 [internal function]: {closure}()
+#5 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(329): call_user_func_array(Object(Closure), Array)
+#6 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(253): Bramus\Router\Router->handle(Array, true)
+#7 D:\Programmes\wamp64\www\Projets\handi3\index.php(44): Bramus\Router\Router->run()
+#8 {main}
+  thrown in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php on line 30
+[19-Jan-2018 21:27:59 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php:30
+Stack trace:
+#0 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(30): PDO->__construct('mysql:dbname=ha...', 'root', 'root', Array)
+#1 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(44): home\home->ConnectToDb()
+#2 D:\Programmes\wamp64\www\Projets\handi3\Controllers\home\home.php(8): home\home->SearchArticles()
+#3 D:\Programmes\wamp64\www\Projets\handi3\index.php(18): require('D:\\Programmes\\w...')
+#4 [internal function]: {closure}()
+#5 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(329): call_user_func_array(Object(Closure), Array)
+#6 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(253): Bramus\Router\Router->handle(Array, true)
+#7 D:\Programmes\wamp64\www\Projets\handi3\index.php(44): Bramus\Router\Router->run()
+#8 {main}
+  thrown in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php on line 30
+[19-Jan-2018 21:28:00 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php:30
+Stack trace:
+#0 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(30): PDO->__construct('mysql:dbname=ha...', 'root', 'root', Array)
+#1 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(44): home\home->ConnectToDb()
+#2 D:\Programmes\wamp64\www\Projets\handi3\Controllers\home\home.php(8): home\home->SearchArticles()
+#3 D:\Programmes\wamp64\www\Projets\handi3\index.php(18): require('D:\\Programmes\\w...')
+#4 [internal function]: {closure}()
+#5 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(329): call_user_func_array(Object(Closure), Array)
+#6 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(253): Bramus\Router\Router->handle(Array, true)
+#7 D:\Programmes\wamp64\www\Projets\handi3\index.php(44): Bramus\Router\Router->run()
+#8 {main}
+  thrown in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php on line 30
+[19-Jan-2018 21:28:01 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'root'@'@localhost' (mot de passe: OUI) in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php:30
+Stack trace:
+#0 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(30): PDO->__construct('mysql:dbname=ha...', 'root', 'root', Array)
+#1 D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php(44): home\home->ConnectToDb()
+#2 D:\Programmes\wamp64\www\Projets\handi3\Controllers\home\home.php(8): home\home->SearchArticles()
+#3 D:\Programmes\wamp64\www\Projets\handi3\index.php(18): require('D:\\Programmes\\w...')
+#4 [internal function]: {closure}()
+#5 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(329): call_user_func_array(Object(Closure), Array)
+#6 D:\Programmes\wamp64\www\Projets\handi3\Libs\Bramus\Router.php(253): Bramus\Router\Router->handle(Array, true)
+#7 D:\Programmes\wamp64\www\Projets\handi3\index.php(44): Bramus\Router\Router->run()
+#8 {main}
+  thrown in D:\Programmes\wamp64\www\Projets\handi3\Models\home\home.php on line 30

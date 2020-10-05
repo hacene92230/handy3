@@ -1,0 +1,45 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title"><i class="fa fa-home"></i> Liste des articles {if="$PAGE!=1"}Page {$PAGE}{/if}</h1>
+
+	{if="$ERROR_ARTICLE!=null"}
+	<h3 class="display-errors">{$ERROR_ARTICLE}</h3>
+    <a href="{$BASE_DIR}" style="color: blue;">Cliquez ici pour revenir à l'accueil du site.</a>
+	{/if}
+
+	<div class="list-articles">
+		
+		{loop="$ARTICLES"}
+		<article class="view-normal">
+			
+			<img src="{$value.lien_image}" class="article-img">
+			<h3 class="article-title"><a href="{$BASE_DIR}articles/{$value.id}">{$value.titre}</a></h3>
+			<button onclick="location.href='{$BASE_DIR}articles/{$value.id}'" class="article-link">Afficher l'article</button>
+			<a href="{$BASE_DIR}membres/{$value.auteur}" class="article-author">Par {$value.auteur}</a>
+			<span class="article-date">{$value.date}</span>
+
+			<p class="article-preview">
+				{$value.contenu}
+			</p>
+
+		</article>
+		{/loop}
+
+		<div class="navigation-articles">
+			{if="$PAGE!=1"}<a href="{$BASE_DIR}page/{$PAGE-1}" title="Page précédente">Page précédente</a>
+			<a href="{$BASE_DIR}" title="page 1">1</a>{/if}
+			<a href="{$BASE_DIR}page/2" title="page 2">2</a>
+			<a href="{$BASE_DIR}page/3" title="page 3">3</a>
+			<a href="{$BASE_DIR}page/4" title="page 4">4</a>
+			<a href="{$BASE_DIR}page/5" title="page 5">5</a>
+			<a href="{$BASE_DIR}page/6" title="page 6">6</a>
+			<a href="{$BASE_DIR}page/{$PAGE+1}" title="Page suivante">Page suivante</a>
+		</div>
+
+	</div>
+
+</div>
+
+{include="../footer"}

@@ -1,0 +1,38 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title">Handi3 | Recherche sur le site</h1>
+
+	{if="$ERROR_RESEARCH!=null"}
+	<h3 class="display-errors">{$ERROR_RESEARCH}</h3>
+	{/if}
+
+	<div class="search-bar-large">
+		<label for="search-bar" style="display: none;">Faire une recherche sur le site...</label>
+		<i class="fa fa-search" id="fa-search-large"></i> <input type="text" id="search-bar-large" value="{$SEARCH}" placeholder="Faire une recherche sur le site..." />
+	</div>
+
+	<div class="list-articles">
+		
+		{loop="$RESULTS"}
+		<article class="view-normal">
+			
+			<img src="{$value.lien_img}" class="article-img">
+			<h3 class="article-title"><a href="{$BASE_DIR}articles/{$value.id}">{$value.titre}</a></h3>
+			<button onclick="location.href='{$BASE_DIR}articles/{$value.id}'" class="article-link">Afficher l'article</button>
+			<a href="{$BASE_DIR}membres/{$value.auteur}" class="article-author">Par {$value.auteur}</a>
+			<span class="article-date">{$value.date}</span>
+
+			<p class="article-preview">
+				{$value.extrait}
+			</p>
+
+		</article>
+		{/loop}
+
+	</div>
+
+</div>
+
+{include="../footer"}

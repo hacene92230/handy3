@@ -1,0 +1,57 @@
+{include="../header"}
+
+<div class="container">
+
+	{if="$ERROR==400"}
+	<h1 class="h1-title">Erreur 400 | Echec de l'analyse HTTP.</h1>
+	{/if}
+
+	{if="$ERROR==401"}
+	<h1 class="h1-title">Erreur 401 | mauvais pseudo ou mot de passe dans la configuration du serveur</h1>
+	{/if}
+
+	{if="$ERROR==402"}
+	<h1 class="h1-title">Erreur 402 | Le client doit reformuler sa demande avec les bonnes données de paiement.</h1>
+	{/if}
+
+	{if="$ERROR==403"}
+	<h1 class="h1-title">Erreur 403 | Requête interdite.</h1>
+	{/if}
+
+	{if="$ERROR==404"}
+	<h1 class="h1-title">Erreur 404 | Page Introuvable ou indisponible</h1>
+	{/if}
+
+	{if="$ERROR==405"}
+	<h1 class="h1-title">Erreur 405 | Méthode non autorisée.</h1>
+	{/if}
+
+	{if="$ERROR==500"}
+	<h1 class="h1-title">Erreur 500 | Erreur interne au serveur ou serveur saturé..</h1>
+	{/if}
+
+	{if="$ERROR==501"}
+	<h1 class="h1-title">Erreur 501 | Le serveur ne supporte pas le service demandé.</h1>
+	{/if}
+
+	{if="$ERROR==502"}
+	<h1 class="h1-title">Erreur 502 | Mauvaise passerelle.</h1>
+	{/if}
+
+	{if="$ERROR==503"}
+	<h1 class="h1-title">Erreur 503 | Service indisponible..</h1>
+	{/if}
+
+	{if="$ERROR==504"}
+	<h1 class="h1-title">Erreur 504 | Trop de temps à la réponse.</h1>
+	{/if}
+
+	{if="$ERROR==505"}
+	<h1 class="h1-title">Erreur 505 | Version HTTP non supportée.</h1>
+	{/if}
+
+	<a href="{$BASE_DIR}" style="color: blue;">Revenir à l'accueil du site.</a>
+
+</div>
+
+{include="../footer"}

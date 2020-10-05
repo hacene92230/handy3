@@ -1,0 +1,19 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title"><i class="fa fa-files-o"></i> Liste des fichiers mis à votre disposition</h1>
+
+	<div class="list-files">
+        <h3>{$FILES_COUNT} fichiers disponibles :</h3>
+        {loop="$FICHIERS"}
+		<div class="file">
+            <span class="file-name">{$value}</span>
+            <a href="{$BASE_DIR}files/{$value}" download="{$value}" class="file-download"><i class="fa fa-download"></i> Télécharger</a>
+        </div>
+        {/loop}
+	</div>
+
+</div>
+
+{include="../footer"}

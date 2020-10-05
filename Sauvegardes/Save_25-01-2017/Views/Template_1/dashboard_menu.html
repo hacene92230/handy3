@@ -1,0 +1,11 @@
+		<div class='menu-links'>
+			<a href='{$BASE_DIR}dashboard'>Tableau de bord</a>
+			<a href='{$BASE_DIR}profile'>Mon profil</a>
+			{if="$IS_ADMIN"}
+			<a href='{$BASE_DIR}articles-new'>Nouvel article</a>
+			<a href='{$BASE_DIR}articles-list'>Liste des articles</a>
+			<a href='{$BASE_DIR}membres-list'>Liste des membres</a>
+			<a href='{$BASE_DIR}upload'>Gérer les fichiers</a>
+			<a id='save_require' title="Effectuer une sauvegarde">Effectuer une sauvegarde</a>
+			{/if}
+		</div>

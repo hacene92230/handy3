@@ -1,0 +1,41 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title">{$NAME} | Suppression d'un article</h1>
+
+	<div class="dashboard">
+
+		{include="../dashboard_menu"}
+
+		<div class="content-right">
+			
+			{if="$ERROR_ARTICLE!=null"}
+			<h3 class="display-errors">{$ERROR_ARTICLE}</h3>
+			{/if}
+
+			<h2><i class="fa fa-trash"></i> Suppression d'un article :</h2>
+			<h2><i class="fa fa-question-circle"></i> Confirmez-vous la suppression totale de l'article ?</h2>
+
+			<form action="" method="POST" class="form" style="text-align: center;">
+
+				<input type="text" style="display: none;" name="form-delete_article" value="posted">
+
+				<div class="confirm confirm-yes">
+					<input type="radio" name="confirm" value="oui" required=""> Oui
+				</div>
+				<div class="confirm confirm-no">
+					<input type="radio" name="confirm" value="non" required="" checked=""> Non
+				</div>
+
+				<input type="submit" value="Confirmer" class="button-send">
+
+			</form>
+
+		</div>
+
+	</div>
+
+</div>
+
+{include="../footer"}

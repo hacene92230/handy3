@@ -1,0 +1,38 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title"><i class="fa fa-upload"></i> Page Upload | Mise en ligne de fichiers</h1>
+
+	<div class="dashboard">
+
+	{include="../dashboard_menu"}
+
+	<div class="content-right">
+
+		<div class="new-upload">
+
+			<form enctype="multipart/form-data" method="post" action="">
+				<input type="file" name="file_field" value="">
+				<input type="submit" name="Submit" value="Lancer l'Upload">
+			</form>
+
+		</div>
+
+		<div class="list-files">
+			
+			<h2>Fichiers disponibles :</h2>
+
+			<ul>
+			{loop="$FILES"}
+				<li>{$value}</li>
+			{/loop}
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>
+
+{include="../footer"}

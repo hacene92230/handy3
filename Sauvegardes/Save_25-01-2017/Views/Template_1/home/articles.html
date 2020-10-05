@@ -1,0 +1,26 @@
+{include="../header"}
+
+<div class="container">
+
+	<h1 class="h1-title"><i class="fa fa-file-text-o"></i> {$ARTICLES.titre}</h1>
+
+	<div class="list-articles">
+		
+		<article class="view-large">
+			
+			<img src="{$ARTICLES.lien_image}" class="article-img">
+			<h3 class="article-title"><a href="">{$ARTICLES.titre}</a></h3>
+			<a href="{$BASE_DIR}membres/{$ARTICLES.auteur}" class="article-author">Par {$ARTICLES.auteur}</a>
+			<span class="article-date">{$ARTICLES.date}</span>
+
+			<p class="article-preview">
+				{$ARTICLES.contenu}
+			</p>
+
+		</article>
+
+	</div>
+
+</div>
+
+{include="../footer"}
